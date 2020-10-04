@@ -6,7 +6,7 @@ const port = 3000;
 app.use('/',express.static('public'));
 
 const budget = require('./budgetDetails.json');
-console.log(budget);
+// console.log(budget);
 
 app.get('/hello',(req, res) => {
     res.send('Hello world!!');
