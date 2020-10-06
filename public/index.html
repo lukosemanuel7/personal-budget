@@ -157,7 +157,7 @@ function createChart(){
 
 
 function getBudget() {
-    axios.get('/budget')
+    axios.get('http://localhost:3000/budget')
     .then(function(res){
         console.log(res);
         for (var i = 0; i<res.data.myBudget.length;i++){
@@ -228,11 +228,11 @@ function randomData (d){
 	});
 }
 
-d3.json("/budget", function (d) {
+d3.json("http://localhost:3000/budget", function (d) {
 change(randomData(d));
 });
 
-d3.json("/budget", function (d) {
+d3.json("http://localhost:3000/budget", function (d) {
 
 d3.select(".randomize")
 	.on("click", function(){
